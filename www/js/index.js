@@ -34,6 +34,17 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        var obj = document.getElementById("content");
+        obj.value = "uuid:" + window.device.uuid + "\r\n";
+        obj.value += "model:" + window.device.model + "\r\n";
+        obj.value += "platform:" + window.device.platform + "\r\n";
+        obj.value += "version:" + window.device.version + "\r\n";
+        obj.value += "cordova:" + window.device.cordova + "\r\n";
+        // window.navigator.accelerometer.getCurrentAcceleration(function(acc) {obj.value += "X:" + acc.x + "\r\nY:" + acc.y + "\r\nZ:" + acc.z + "\r\ntime:" + acc.timestam	p;}, function() {});
+        // obj.value += "CurrentAcceleration:" + window.navigator.accelerometer.getCurrentAcceleration + "\r\n";
+        obj.value += "network:" + window.navigator.connection.type + "\r\n";
+        obj.value += "width:" + window.screen.availWidth + "\r\n";
+        obj.value += "height:" + window.screen.availHeight + "\r\n";
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
