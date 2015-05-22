@@ -31,19 +31,19 @@
     </head>
     <body>
         <div class="app">
-            <h1><output name='tt'></output></h1>
+            <h1>Hello</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+                <p class="event received"><output id="abc"></output></p>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-        	document.all.elements.tt.value = 'PhoneGap';
+        	document.getElementById("abc").value = "Device is Readyabc";
             app.initialize();
             app.onDeviceReady = function() {
-            	document.all.elements.tt.value = device.name;
+            	document.getElementById("abc").value = window.device.name;
             }
         </script>
     </body>
