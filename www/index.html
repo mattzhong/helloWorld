@@ -40,11 +40,13 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
+        	alert(device);
         	document.getElementById("abc").value = "Device is Readyabc";
             app.initialize();
             app.onDeviceReady = function() {
             	document.getElementById("abc").value = window.device.name;
             }
+            alert(device);
         </script>
     </body>
 </html>
