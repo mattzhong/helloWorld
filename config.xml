@@ -5,8 +5,6 @@ xmlns:android   = "http://schemas.android.com/apk/res/android"
 id              = "com.lumberg.greeeaaat"
 versionCode		= "10"
 version         = "1.0.0">
-	<preference name="phonegap-version" value="1.0.0"/>
-	<preference name="permissions" value="none"/>
 	<icon src="laphonegap_icon.png"/>
 	<gap:splash src="laphonegap_splash.png" gap:platform="android" gap:qualifier="port-ldpi" />
     <gap:splash src="laphonegap_splash.png" gap:platform="android" gap:qualifier="port-mdpi" />
