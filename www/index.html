@@ -31,23 +31,17 @@
     </head>
     <body>
         <div class="app">
-            <h1>Hello</h1>
+            <h1>PhoneGap</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
-                <p class="event received"><output id="abc"></output></p>
+                <p class="event received">Device is Ready</p>
             </div>
         </div>
         <a href="http://192.168.21.4:3000">192.168.21.4:3000</a>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-        	alert(device);
-        	document.getElementById("abc").value = "Device is Readyabc";
             app.initialize();
-            app.onDeviceReady = function() {
-            	document.getElementById("abc").value = window.device.name;
-            }
-            alert(device);
         </script>
     </body>
 </html>
