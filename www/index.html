@@ -28,6 +28,11 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
+        <script type="text/javascript">
+        	function jump() {
+        		document.location.href = document.getElementById("url");
+        	}
+        </script>
     </head>
     <body>
         <div class="app">
@@ -36,7 +41,8 @@
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received"><pre><output id="content"></output></pre></p>
             </div>
-            <a href="http://baidu.com">访问百度</a>
+            <input type="text" id="url"/>
+            <button onclick="jump();">跳转</button>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
